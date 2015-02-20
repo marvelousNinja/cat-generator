@@ -1,0 +1,25 @@
+<head>
+  <title>CAT GENERATOR</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> catList}}
+  {{> generateCat}}
+</body>
+
+<template name='catList'>
+  <div class='cat-list'>
+    {{#each cats}}
+      {{> cat}}
+    {{/each}}
+  </div>
+</template>
+
+<template name='cat'>
+  <img class='cat' src={{generatedUrl}}>
+</template>
+
+<template name='generateCat'>
+  <button class='generate-cat'>Launch a new cat!</button>
+</template>
